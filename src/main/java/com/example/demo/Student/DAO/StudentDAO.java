@@ -87,7 +87,8 @@ public class StudentDAO {
             preparedStatement.setString(4, student.getAddress());
             preparedStatement.setString(5, student.getPhoneNumber());
             preparedStatement.setInt(6, student.getClassRom().getId());
-            preparedStatement.executeUpdate();
+            preparedStatement.setInt(7, student.getId());
+                        preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }

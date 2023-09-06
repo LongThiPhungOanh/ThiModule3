@@ -85,7 +85,8 @@ public class StudentServlet extends HttpServlet {
     }
     private void updatePostProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        service.update(request, id);
+        Student student = service.findOne(id);
+        service.update(request, student);
         response.sendRedirect("/students");
     }
     public void createGetProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

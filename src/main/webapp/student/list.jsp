@@ -45,7 +45,7 @@ To change this template use File | Settings | File Templates.
                 <td><c:out value="${s.getDateOfBirth()}"/></td>
                 <td><c:out value="${s.getAddress()}"/></td>
                 <td><c:out value="${s.getPhoneNumber()}"/></td>
-                <td><c:out value="${s.getClassRom().getId()}"/></td>
+                <td><c:out value="${s.getClassRom().getName()}"/></td>
                 <td><a class="btn btn-warning"  href="students?action=update&&id=${s.getId()}">Update</a></td>
                 <td><a class="btn btn-danger" onclick="deleteA(${s.getId()})">Delete</a></td>
             </tr>

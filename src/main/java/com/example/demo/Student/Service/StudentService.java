@@ -41,9 +41,13 @@ public class StudentService {
             student = new Student(name, email, date, address, phone, classRom);
             return student;
         }
-        public void update(HttpServletRequest request, int id) {
-            Student student = returnObj(request);
-            student.setId(id);
+        public void update(HttpServletRequest request, Student student) {
+            Student newStudent = returnObj(request);
+            student.setName(newStudent.getName());
+            student.setEmail(newStudent.getEmail());
+            student.setDateOfBirth(newStudent.getDateOfBirth());
+            student.setAddress(newStudent.getAddress());
+            student.setPhoneNumber(newStudent.getPhoneNumber());
             studentDAO.update(student);
         }
 
