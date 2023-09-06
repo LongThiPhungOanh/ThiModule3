@@ -48,6 +48,7 @@ public class StudentService {
             student.setDateOfBirth(newStudent.getDateOfBirth());
             student.setAddress(newStudent.getAddress());
             student.setPhoneNumber(newStudent.getPhoneNumber());
+            student.setClassRom(newStudent.getClassRom());
             studentDAO.update(student);
         }
 
